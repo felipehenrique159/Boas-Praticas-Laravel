@@ -20,4 +20,4 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
-Route::get('/orders', 'OrderController@index')->name('orders.index');
+Route::get('/orders', 'OrderController@index')->name('orders.index')->middleware('auth');
